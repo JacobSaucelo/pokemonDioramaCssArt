@@ -1,0 +1,297 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.frame {
+  height: 300px;
+  width: 300px;
+  perspective: 600px;
+}
+
+.cube {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.wall {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  image-rendering: pixelated;
+}
+
+.wallBack {
+  background: url("treesBg2.png") left center / cover no-repeat;
+  transform: translateZ(-150px);
+}
+.wallBottom {
+  background: url("floor.png") center center / cover no-repeat;
+  background-color: red;
+  transform: rotateX(90deg) translateZ(-150px);
+}
+.wallTop {
+  background-color: green;
+  transform: rotateX(90deg) translateZ(150px);
+}
+.wallLeft {
+  background-color: yellow;
+  transform: rotateY(90deg) translateZ(-150px);
+}
+.wallRight {
+  background: url("treesBg2.png") left center / cover no-repeat;
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.grass {
+  background: url("grass.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+.g1 {
+  transform: translateX(200px) translateY(260px);
+}
+/* .g2 {
+  transform: translateX(160px) translateY(260px);
+} */
+.g3 {
+  transform: translateX(240px) translateY(260px);
+}
+.g4 {
+  transform: translateX(200px) translateY(260px) translateZ(-30px);
+}
+.g5 {
+  transform: translateX(160px) translateY(260px) translateZ(-30px);
+}
+.g6 {
+  transform: translateX(240px) translateY(260px) translateZ(-30px);
+}
+.g7 {
+  transform: translateX(200px) translateY(260px) translateZ(-60px);
+}
+.g8 {
+  transform: translateX(160px) translateY(260px) translateZ(-60px);
+}
+.g9 {
+  transform: translateX(240px) translateY(260px) translateZ(-60px);
+}
+.g10 {
+  transform: translateX(200px) translateY(260px) translateZ(-90px);
+}
+.g11 {
+  transform: translateX(160px) translateY(260px) translateZ(-90px);
+}
+.g12 {
+  transform: translateX(240px) translateY(260px) translateZ(-90px);
+}
+
+.gl1 {
+  transform: translateX(0px) translateY(260px) translateZ(-90px);
+}
+.gl2 {
+  transform: translateX(40px) translateY(260px) translateZ(-90px);
+}
+.gl3 {
+  transform: translateX(80px) translateY(260px) translateZ(-90px);
+}
+.gl4 {
+  transform: translateX(0px) translateY(260px);
+}
+.gl5 {
+  transform: translateX(40px) translateY(260px) translateZ(-30px);
+}
+.gl6 {
+  transform: translateX(80px) translateY(260px) translateZ(-30px);
+}
+.gl7 {
+  transform: translateX(0px) translateY(260px) translateZ(-30px);
+}
+.gl8 {
+  transform: translateX(0px) translateY(260px) translateZ(-60px);
+}
+
+.gf1 {
+  transform: translateX(0px) translateY(260px) translateZ(85px);
+}
+.gf2 {
+  transform: translateX(40px) translateY(260px) translateZ(85px);
+}
+.gf3 {
+  transform: translateX(80px) translateY(260px) translateZ(85px);
+}
+
+.flower {
+  background: url("flower.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+
+.f1 {
+  transform: translateX(200px) translateY(260px) translateZ(60px);
+}
+.f2 {
+  transform: translateX(115px) translateY(260px) translateZ(-90px);
+}
+
+.stone {
+  background: url("stone.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+
+.s1 {
+  transform: translateX(240px) translateY(260px) translateZ(-90px);
+}
+.s2 {
+  transform: translateX(80px) translateY(267px) translateZ(85px);
+}
+
+.tree {
+  background: url("singleTree.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 220px;
+  width: 220px;
+  position: absolute;
+}
+
+.t1 {
+  transform: translateX(-30px) translateY(83px) translateZ(-60px);
+}
+.t2 {
+  transform: translateX(-60px) translateY(83px) translateZ(120px);
+  opacity: 0.3;
+}
+
+.pokemon {
+  image-rendering: pixelated;
+  position: absolute;
+}
+
+.bulbasur {
+  background: url("bulbasur.gif") left center / cover no-repeat;
+  transform: rotateY(180deg) translateX(-15px) translateY(245px)
+    translateZ(30px);
+  height: 55px;
+  width: 55px;
+}
+.ratz {
+  background: url("raltz.gif") left center / cover no-repeat;
+  transform: translateX(205px) translateY(235px) translateZ(-60px);
+  height: 65px;
+  width: 65px;
+}
+.pidgeot {
+  background: url("pidgeoto.gif") left center / cover no-repeat;
+  transform: translateX(135px) translateY(15px) translateZ(-60px);
+  height: 170px;
+  width: 120px;
+}
+.running {
+  animation: 3s run ease-in-out alternate infinite;
+  /* transform: rotateY(0deg) translateX(130px) translateY(245px) translateZ(60px); */
+}
+.bgPoke {
+  background: url("run.gif") left center / cover no-repeat;
+  height: 55px;
+  width: 55px;
+  animation: 3s flip infinite;
+}
+
+.sign {
+  background: url("sign.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  transform: translateX(90px) translateY(252px) translateZ(-40px);
+}
+.box {
+  background: url("box.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  transform: translateX(230px) translateY(235px) translateZ(60px);
+}
+
+.gate {
+  background: url("gate.png") left center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 55px;
+  width: 55px;
+  position: absolute;
+}
+
+.gt1 {
+  transform: translateX(235px) translateY(245px) translateZ(90px);
+}
+.gt2 {
+  transform: rotateY(90deg) translateX(-115px) translateY(245px)
+    translateZ(90px);
+}
+
+@keyframes run {
+  0% {
+    transform: rotateY(-10deg) translateX(130px) translateY(245px)
+      translateZ(60px);
+  }
+  100% {
+    transform: rotateY(90deg) translateX(130px) translateY(245px)
+      translateZ(60px);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: rotateY(0);
+  }
+  1% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0);
+  }
+  99% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}
